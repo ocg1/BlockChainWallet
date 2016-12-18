@@ -1,10 +1,11 @@
-!!!
+!!! 5
 %html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title BlockChainWallet
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+  - meta_tag :description,"bitcoin, ethereum token wallet"
+  - meta_tag :keywords,"bitcoin, ethereum, token, wallet"
+  = render 'head'
+  %body{class:"#{controller_name} #{action_name}"}
+    = include_gon
+    = render 'flash'
+    -# = header
     = yield
+    = render 'footer'
