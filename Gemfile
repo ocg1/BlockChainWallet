@@ -32,6 +32,16 @@ gem 'jbuilder', '~> 2.5'
 
 gem "haml-rails", "~> 0.9"
 
+gem "clearance"
+
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+
+gem "lograge"
+
+gem 'gon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,6 +52,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "letter_opener"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
